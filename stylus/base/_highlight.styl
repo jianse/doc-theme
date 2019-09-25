@@ -2,10 +2,16 @@
 // for code highlight styles
 
 // common language styles
-code[class*="language-*"]
-pre[code[class*="language-*"]
+
+pre[class*="language-"]
+code[class*="language-"]
     font-family: $code-font-family
     font-size: $code-font-size
+    color: $code-primary-color
+    
+    &::selection
+    ::selection
+        background: $code-selection-bg
 
-    .token
-    $code-styles
+    {$code-token-styles}
+        

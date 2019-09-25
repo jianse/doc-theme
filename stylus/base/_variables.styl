@@ -1,10 +1,12 @@
 // Code div
-// this styles only affect the style of code area not the code it self
+// this styles only affect the style of code area not the code itself
 
 
-$pre-bg = #112233
+$pre-bg = #f8f8f8
+$pre-border-color = #112233
+$pre-border-radius = 10px
 
-$
+$pre-after-color = #123
 
 
 // Code highlight
@@ -14,13 +16,19 @@ $
 // shadows text decoration etc.
 // and some control of code like comment itlic switch
 
-$code-font-size = 1em
-$code-font-family = 'Ubuntu mono','',Cursor,Consoles
+$code-font-size = 1rem
+$code-font-family = 'Ubuntu mono','1234',Cursor,Consoles,monospace
 $code-primary-color = #000000
-$code-selection-color = #eeeeee
+$code-selection-bg = #b3d4fc
 
-$code-styles = {
-    '.function':{
-        color : #DD4A68
-    }
+
+
+$code-token-styles = {
+  '.token.function':{
+      color : #DD4A68
+  },
+  '.token.comment':{
+    color : rgb(84,84,84),
+    font-style: italic
+  }
 }

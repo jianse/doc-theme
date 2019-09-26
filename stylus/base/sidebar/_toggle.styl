@@ -1,7 +1,8 @@
 // sidebar toggle button style
+// this style is very relited to a spacal docsify version
 
 .sidebar-toggle
-    position: fixed
+    position: absolute
     left 0
     bottom: 0
     width: $sidebar-width
@@ -9,6 +10,7 @@
     z-index 4
     padding: 0.6rem
     outline: none
+    transition: left .25s ease-in-out
 
     span 
         display block
@@ -17,3 +19,6 @@
         height 2px
         margin: 4px 0
 
+body.close
+    .sidebar-toggle
+        left $sidebar-width

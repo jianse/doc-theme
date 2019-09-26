@@ -1,12 +1,67 @@
+// base vars
+$base-font-size = 1rem
+$theme-color = #42B983
+
+// sidebar vars
+$sidebar-width = 300px
+
+$sidebar-toggle-color =$theme-color
+
+
+// markdown section vars
+
+$md-max-width = 800px
+
+
+// headings
+
+// headings font size
+$h1-font-size = $base-font-size * 2.5
+$h2-font-size = $base-font-size * 2
+$h3-font-size = $base-font-size * 1.75
+$h4-font-size = $base-font-size * 1.5
+$h5-font-size = $base-font-size * 1.25
+$h6-font-size = $base-font-size
+
+// headings font family weight color
+$headings-font-family = 'Source Han Serif CN',serif
+$headings-font-weight = 900
+$headings-color = black
+
+$anchor-color = $theme-color
+
+
+// links
+$link-color = $theme-color
+$link-font-weight = 600
+
+//paragraph
+$p-margin = 1.2rem 0
+$p-line-height = 1.6rem
+$p-italic-color=#123
+$p-bold-font-weight = 600
+// inline code
+$p-code-font-family = $code-font-family
+$p-code-bg = $pre-bg
+$p-code-border-radius = 2px
+$p-code-color = #e96900
+$p-code-padding = 3px 5px
+
+// blockqute
+$bq-border-left = .25rem solid $theme-color
+$bq-padding-left = 1.4rem
+
+
 // Code div
 // this styles only affect the style of code area not the code itself
-
 
 $pre-bg = #f8f8f8
 $pre-border-color = #112233
 $pre-border-radius = 10px
-
-$pre-after-color = #123
+$pre-padding = 1.4rem
+$pre-after-color = #aaa
+$pre-after-font-weight = 900
+$pre-after-padding = 10px 5px
 
 
 // Code highlight
@@ -21,8 +76,7 @@ $code-font-family = 'Ubuntu mono','1234',Cursor,Consoles,monospace
 $code-primary-color = #000000
 $code-selection-bg = #b3d4fc
 
-
-
+// code token highlight
 $code-token-styles = {
   '.token.function':{
       color : #DD4A68

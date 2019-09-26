@@ -10,7 +10,7 @@
     "build:css": "run-p \"css -- -o dest/\"",
     "build:css:min": "run-p \"css -- -o dest/ -c --ext .min.css\"",
     "watch:css": "run-p \"css -- -w -o lib/\"",
-    "dev": "run-p serve watch:*",
+    "dev": "run-p watch:* serve ",
     "test": "echo \"no test !\""
   },
   "author": "qiang",

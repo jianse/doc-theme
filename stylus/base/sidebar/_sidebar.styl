@@ -1,0 +1,14 @@
+// sidebar style
+
+.sidebar
+    position: fixed
+    width $sidebar-width
+    top 0
+    left 0
+    bottom 0
+    border-right: 1px solid rgba(0,0,0,.07)
+    transition transform .25s ease-in-out
+
+body.close
+    .sidebar
+        transform: translateX(-($sidebar-width))

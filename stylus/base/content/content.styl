@@ -1,0 +1,18 @@
+// content div styles
+
+@import '_markdown'
+
+.content 
+    position: absolute
+    top: 0
+    right 0
+    bottom 0
+    left $sidebar-width
+    transition left .25s ease-in-out
+    
+    &.close
+        left 0
+        
+body.close
+    .content
+        left 0

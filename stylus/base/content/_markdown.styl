@@ -1,0 +1,17 @@
+// style for markdown section
+
+.markdown-section
+    max-width: $md-max-width
+    margin: 0 auto
+    padding: 2rem 1rem
+
+    @import '_headings'
+    @import '_paragraph'
+    @import '_link'
+    @import '_codeblock'
+
+    +prefix-classes('prism-')    
+        @import '_highlight'
+    @import '_blockquote'
+    
+    

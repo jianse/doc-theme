@@ -6,8 +6,10 @@
   "scripts": {
     "serve": "node server",
     "css": "stylus stylus/ -u autoprefixer-stylus",
-    "build:css": "run-p 'css -- -o dest -c'",
-    "watch:css": "run-p 'css -- -w -o dest/'",
+    "build": "run-p build:**",
+    "build:css": "run-p \"css -- -o dest/\"",
+    "build:css:min": "run-p \"css -- -o dest/ -c --ext .min.css\"",
+    "watch:css": "run-p \"css -- -w -o lib/\"",
     "dev": "run-p serve watch:*",
     "test": "echo \"no test !\""
   },

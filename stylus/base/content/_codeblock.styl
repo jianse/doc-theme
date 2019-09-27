@@ -5,9 +5,17 @@
 pre
     background: $pre-bg
     // border 0px solid $pre-border-color
-    border-left :5px solid $pre-border-color
+    // border-left :5px solid $pre-border-color
     padding: $pre-padding
     position: relative
+    // make scroll bar auto show
+    overflow: auto
+    // give code block some margin
+    margin: 1.2rem 0
+
+    code 
+        display: block
+        overflow: inherit
 
     &::after
         color:$pre-after-color

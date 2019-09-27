@@ -3,6 +3,9 @@
 
 .sidebar
     position: relative
+    // the sidebar must set a z-index greater than main content 
+    // to make toggle button show upon main content
+    z-index: 1
     width $sidebar-width
     height 100vh
     top 0

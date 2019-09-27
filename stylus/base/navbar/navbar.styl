@@ -1,7 +1,35 @@
-// navbar style unfinished 
-// todo: add :hover style
+// navbar style 
 
 .app-nav
     position: absolute
     right 0 
     z-index: 2
+    margin 1.6rem 2rem
+    font-size: .8rem
+    
+    a
+        text-decoration: none
+        color #000
+
+        &.active
+            color $theme-color
+
+    ul  
+        list-style none
+        
+        >li
+            position relative
+
+            >ul
+                position: absolute
+                left -15px
+                background-color: write 
+                border-radius: 3px
+                border: 1px solid #ddd
+                display: none
+
+                >li
+                    margin: .8rem .4rem
+
+            &:hover>ul
+                display block

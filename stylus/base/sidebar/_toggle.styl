@@ -12,6 +12,10 @@
     outline: none
     transition: left .25s ease-in-out
 
+    // hover style
+    &:hover
+        opacity .4
+
     span 
         display block
         background-color: $sidebar-toggle-color
@@ -19,6 +23,9 @@
         height 2px
         margin: 4px 0
 
+// when the sidebar close make toggle button's background transparent
 body.close
     .sidebar-toggle
+        background-color: transparent
         left $sidebar-width
+        width 40px

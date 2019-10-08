@@ -1,51 +1,120 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for 
+// consistent naming.
+
+
+
+// Options
+// 
+// Quickly modify global styling by enabling or disabling optional features
+
+$enable-shadows = false
+$enable-rounded = true 
+
+// Spacing
+// 
+// Control the default styling of most elements 
+
+$spacer = 1rem
+
+// css3 variables
+// 
+// All variables are here convert to css3 vars ,
+
+$css3-vars = {}
+
+
 // base vars
+
 $base-font-size = 1rem
+$base-font-family = "Roboto",source-han-sans-simplified-c,"Noto Sans SC","Source Sans Pro", Helvetica, Arial, sans-serif
 $theme-color = #42B983
 
-// sidebar vars
-$sidebar-width = 300px
+// body 
+// 
+// this variables are directly apply to body tag
 
+$body-font-family = $base-font-family
+
+// CoverPage 
+//
+// 
+
+$cover-bg = #00000000
+
+// Sidebar 
+// 
+// Sidebar style 
+
+$sidebar-width = 300px
 $sidebar-toggle-color =$theme-color
 
+$css3-vars = merge({
+  '--sidebar-width':$sidebar-width,
+  '--sidebar-toggle-color':$sidebar-toggle-color
+},$css3-vars)
 
+// -----------------------------
 // markdown section vars
 
 $md-max-width = 800px
+$md-font-family = $base-font-family
 
+$css3-vars = merge({
+  '--md-max-width':$md-max-width
+},$css3-vars)
 
 // headings
-
+// 
 // headings font size
-$h1-font-size = $base-font-size * 2.5
-$h2-font-size = $base-font-size * 2
-$h3-font-size = $base-font-size * 1.75
-$h4-font-size = $base-font-size * 1.5
-$h5-font-size = $base-font-size * 1.25
-$h6-font-size = $base-font-size
+
+$md-h1-font-size = $base-font-size * 2.5
+$md-h2-font-size = $base-font-size * 2
+$md-h3-font-size = $base-font-size * 1.75
+$md-h4-font-size = $base-font-size * 1.5
+$md-h5-font-size = $base-font-size * 1.25
+$md-h6-font-size = $base-font-size
 
 // headings font family weight color
-$headings-font-family = 'Source Han Serif CN',serif
-$headings-font-weight = 900
-$headings-color = black
+$md-headings-font-family = "Source Han Serif CN" ,serif
+$md-headings-font-weight = 900
+$md-headings-color = black
 
-$anchor-color = $theme-color
+$css3-vars = merge({
+  '--md-h1-font-size':$md-h1-font-size,
+  '--md-h2-font-size':$md-h2-font-size,
+  '--md-h3-font-size':$md-h3-font-size,
+  '--md-h4-font-size':$md-h4-font-size,
+  '--md-h5-font-size':$md-h5-font-size,
+  '--md-h6-font-size':$md-h6-font-size,
+  '--md-headings-font-family':$md-headings-font-family,
+  '--md-headings-font-weight':$md-headings-font-weight,
+  '--md-headings-color':$md-headings-color
+},$css3-vars)
 
+// anchor
+//
+// anchor styles
+
+$md-anchor-color = $theme-color
+
+$css3-vars = merge({
+  '--md-anchor-color':$md-anchor-color
+},$css3-vars)
 
 // links
-$link-color = $theme-color
-$link-font-weight = 600
+//
+// a tag style in markdown section
+
+$md-link-color = $theme-color
+$md-link-font-weight = 600
 
 //paragraph
 $p-margin = 1.2rem 0
 $p-line-height = 1.6rem
 $p-italic-color=#123
 $p-bold-font-weight = 600
-// inline code
-$p-code-font-family = $code-font-family
-$p-code-bg = $pre-bg
-$p-code-border-radius = 2px
-$p-code-color = #e96900
-$p-code-padding = 3px 5px
 
 // blockqute
 $bq-border-left = .25rem solid $theme-color
@@ -63,6 +132,12 @@ $pre-after-color = #aaa
 $pre-after-font-weight = 900
 $pre-after-padding = 10px 5px
 
+// inline code
+$p-code-font-family = $code-font-family
+$p-code-bg = darken($pre-bg,1%)
+$p-code-border-radius = 2px
+$p-code-color = #e96900
+$p-code-padding = 3px 5px
 
 // Code highlight
 // this is the code style only code blocks not inline code

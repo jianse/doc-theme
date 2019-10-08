@@ -1,43 +1,41 @@
 // this style is for markdown section headings
 
-
-h1,h2,h3,h4,h5,h6
-    font-family: $headings-font-family
-    font-weight: $headings-font-weight
-    color:$headings-color
+h1,h2,h3,h4,h5,h6 
+    font-family: getcssvar(--md-headings-font-family)
+    font-weight: getcssvar(--md-headings-font-weight)
+    color: getcssvar(--md-headings-color)
     margin-bottom: .8rem
-
-
+    
     .anchor
         text-decoration: none
-        color: $anchor-color
+        color:getcssvar(--md-anchor-color)
 
         &:hover
             text-decoration: underline
 
         span 
-            color:$headings-color
-            font-weight: $headings-font-weight
+            color: getcssvar(--md-headings-color)
+            font-weight: getcssvar(--md-headings-font-weight)
 
 h1
-    font-size: $h1-font-size
+    font-size: getcssvar(--md-h1-font-size)
     
 h2
-    font-size: $h2-font-size
-    margin-top: $h2-font-size * 0.8
+    font-size: getcssvar(--md-h2-font-size)
+    margin-top: $md-h2-font-size * 0.8
 
 h3
-    font-size: $h3-font-size
-    margin-top: $h3-font-size * 0.8
+    font-size: getcssvar(--md-h3-font-size)
+    margin-top: $md-h3-font-size * 0.8
 
 h4
-    font-size: $h4-font-size
-    margin-top: $h4-font-size * 0.8
+    font-size: getcssvar(--md-h4-font-size)
+    margin-top: $md-h4-font-size * 0.8
 
 h5
-    font-size: $h5-font-size
-    margin-top: $h5-font-size * 0.8
+    font-size:getcssvar(--md-h5-font-size)
+    margin-top: $md-h5-font-size * 0.8
 
 h6
-    font-size: $h6-font-size
-    margin-top: $h6-font-size * 0.8
+    font-size: getcssvar(--md-h6-font-size)
+    margin-top: $md-h6-font-size * 0.8

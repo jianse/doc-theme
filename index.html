@@ -2,94 +2,91 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>docsify</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC|Roboto&display=swap&subset=chinese-simplified" rel="stylesheet">
-  <link rel="stylesheet" href="/lib/main.css">
-  <script src="/lib/typekit.js"></script>
-  <!-- <link rel="stylesheet" href="/themes/vue.css" title="vue" disabled>
-  <link rel="stylesheet" href="/themes/dark.css" title="dark" disabled>
-  <link rel="stylesheet" href="/themes/buble.css" title="buble" disabled>
-  <link rel="stylesheet" href="/themes/dark-custom.css" title="dark-custom"> -->
-  <style>
-    nav.app-nav li ul {
-      min-width: 100px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>docsify</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC|Roboto&display=swap&subset=chinese-simplified" rel="stylesheet">
+    <link rel="stylesheet" href="/lib/main.css">
+    <script src="/lib/typekit.js"></script>
+    <link rel="shortcut icon" href="preview/_media/favicon.ico" type="image/x-icon">
+    <style>
+        nav.app-nav li ul {
+            min-width: 100px;
+        }
+    </style>
 </head>
 
 <body>
-  <div id="app"></div>
-  <script>
-    window.$docsify = {
-      alias: {
-        '.*?/awesome': 'https://raw.githubusercontent.com/docsifyjs/awesome-docsify/master/README.md',
-        '.*?/changelog': 'https://raw.githubusercontent.com/docsifyjs/docsify/master/CHANGELOG.md',
-        '/.*/_navbar.md': '/_navbar.md',
-        '/zh-cn/(.*)': 'https://raw.githubusercontent.com/docsifyjs/docs-zh/master/$1',
-        '/de-de/(.*)': 'https://raw.githubusercontent.com/docsifyjs/docs-de/master/$1',
-        '/ru/(.*)': 'https://raw.githubusercontent.com/docsifyjs/docs-ru/master/$1',
-        '/es/(.*)': 'https://raw.githubusercontent.com/docsifyjs/docs-es/master/$1'
-      },
-      auto2top: true,
-      basePath: '/docs/',
-      coverpage: true,
-      executeScript: true,
-      loadSidebar: true,
-      loadNavbar: true,
-      mergeNavbar: true,
-      maxLevel: 4,
-      subMaxLevel: 2,
-      name: 'docsify',
-      search: {
-        noData: {
-          '/de-de/': 'Keine Ergebnisse!',
-          '/zh-cn/': '没有结果!',
-          '/': 'No results!'
-        },
-        paths: 'auto',
-        placeholder: {
-          '/de-de/': 'Suche',
-          '/zh-cn/': '搜索',
-          '/': 'Search'
-        }
-      },
-      formatUpdated: '{MM}/{DD} {HH}:{mm}',
-      plugins: [
-        function (hook, vm) {
-          hook.beforeEach(function (html) {
-            if (/githubusercontent\.com/.test(vm.route.file)) {
-              url = vm.route.file
-                .replace('raw.githubusercontent.com', 'github.com')
-                .replace(/\/master/, '/blob/master')
-            } else {
-              url = 'https://github.com/docsifyjs/docsify/blob/master/docs/' + vm.route.file
-            }
-            var editHtml = '[:memo: Edit Document](' + url + ')\n'
+    <div id="app"></div>
+    <script>
+        window.$docsify = {
+            alias: {
+                '.*?/awesome': 'https://raw.githubusercontent.com/docsifyjs/awesome-docsify/master/README.md',
+                '.*?/changelog': 'https://raw.githubusercontent.com/docsifyjs/docsify/master/CHANGELOG.md',
+                '/.*/_navbar.md': '/_navbar.md',
+                '/zh-cn/(.*)': 'https://raw.githubusercontent.com/docsifyjs/docs-zh/master/$1',
+                '/de-de/(.*)': 'https://raw.githubusercontent.com/docsifyjs/docs-de/master/$1',
+                '/ru/(.*)': 'https://raw.githubusercontent.com/docsifyjs/docs-ru/master/$1',
+                '/es/(.*)': 'https://raw.githubusercontent.com/docsifyjs/docs-es/master/$1'
+            },
+            auto2top: true,
+            basePath: '/preview/',
+            coverpage: true,
+            executeScript: true,
+            loadSidebar: true,
+            loadNavbar: true,
+            mergeNavbar: true,
+            maxLevel: 4,
+            subMaxLevel: 2,
+            name: 'docsify',
+            search: {
+                noData: {
+                    '/de-de/': 'Keine Ergebnisse!',
+                    '/zh-cn/': '没有结果!',
+                    '/': 'No results!'
+                },
+                paths: 'auto',
+                placeholder: {
+                    '/de-de/': 'Suche',
+                    '/zh-cn/': '搜索',
+                    '/': 'Search'
+                }
+            },
+            formatUpdated: '{MM}/{DD} {HH}:{mm}',
+            plugins: [
+                function(hook, vm) {
+                    hook.beforeEach(function(html) {
+                        if (/githubusercontent\.com/.test(vm.route.file)) {
+                            url = vm.route.file
+                                .replace('raw.githubusercontent.com', 'github.com')
+                                .replace(/\/master/, '/blob/master')
+                        } else {
+                            url = 'https://github.com/docsifyjs/docsify/blob/master/docs/' + vm.route.file
+                        }
+                        var editHtml = '[:memo: Edit Document](' + url + ')\n'
 
-            return editHtml
-              + html
-              + '\n\n----\n\n'
-              + '<a href="https://docsify.js.org" target="_blank" style="color: inherit; font-weight: normal; text-decoration: none;">Powered by docsify</a>'
-          })
+                        return editHtml +
+                            html +
+                            '\n\n----\n\n' +
+                            '<a href="https://docsify.js.org" target="_blank" style="color: inherit; font-weight: normal; text-decoration: none;">Powered by docsify</a>'
+                    })
+                }
+            ],
+            docsifyPrism: {
+                init: function() {
+                    Prism.plugins.autoloader.languages_path = 'https://unpkg.com/prismjs@1.17.1/components/'
+                    Prism.plugins.customClass.prefix('prism-')
+                }
+            }
         }
-      ],
-      docsifyPrism: {
-        init: function () {
-          Prism.plugins.autoloader.languages_path = 'https://unpkg.com/prismjs@1.17.1/components/'
-          Prism.plugins.customClass.prefix('prism-')
-        }
-      }
-    }
-  </script>
-  <script src="/lib/docsify.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify@4.9.4/lib/plugins/search.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify-prism@1.0.0/dist/docsify-prism.min.js"></script>
-  <script src="https://unpkg.com/prismjs@1.17.1/prism.js"></script>
-  <script src="https://unpkg.com/prismjs@1.17.1/plugins/custom-class/prism-custom-class.min.js"></script>
-  <script src="https://unpkg.com/prismjs@1.17.1/plugins/autoloader/prism-autoloader.min.js"></script>
+    </script>
+    <script src="/lib/docsify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4.9.4/lib/plugins/search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify-prism@1.0.0/dist/docsify-prism.min.js"></script>
+    <script src="https://unpkg.com/prismjs@1.17.1/prism.js"></script>
+    <script src="https://unpkg.com/prismjs@1.17.1/plugins/custom-class/prism-custom-class.min.js"></script>
+    <script src="https://unpkg.com/prismjs@1.17.1/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>
 
 </html>

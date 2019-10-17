@@ -116,7 +116,7 @@ body {
 .cover span {
   color: inherit;
 }
-#app {
+#app:not(#app[class*="ready"]) {
   font-size: 30px;
   font-weight: lighter;
   margin: 40vh auto;
